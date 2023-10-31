@@ -2,7 +2,7 @@ import React from "react"
 import { Autocomplete, TextField } from "@mui/material"
 
 
-const monthsOption =[
+const monthsAndYearOption =[
     { label: "January", value: 1},
     { label: "February", value: 2, },
     { label: "March" , value: 3, },
@@ -21,12 +21,13 @@ const monthsOption =[
 export default function Filter () {
 
     return (
+        //Still need to change component use date picker 
         <Autocomplete
             size='small'
             disablePortal
-            options={monthsOption}
+            options={monthsAndYearOption}
             sx={{ width: 300 }}
-            renderInput={(params) => <TextField {...params} label="Month" />}
+            renderInput={(params) => <TextField {...params} label="Month and Year" />}
         />
     )
 }
